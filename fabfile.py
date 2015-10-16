@@ -51,6 +51,7 @@ def deploy(to_prod=False, user=None, workon_path=None, source=GIT_REPOSITORY, gi
         run("%sbin/pip install uwsgi" % workon_path)
         if prep_server:
             _prepare_server(user)
+            syncdb = True
         if syncdb:
             run('%sbin/python manage.py syncdb' % workon_path)
     sudo('supervisorct restart %s' % ureport_proc_name)
