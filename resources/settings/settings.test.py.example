@@ -10,7 +10,6 @@ ALLOWED_HOSTS = ['test.ureport.in']
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-API_ENDPOINT = 'https://app.rapidpro.io'
 HOSTNAME = ''
 
 
