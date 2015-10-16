@@ -1,0 +1,9 @@
+[program:ureport_celery]
+command=/var/www/.virtualenvs/ureport/bin/celery -A ureport worker -B -l info
+stdout_logfile=/var/log/ureport/celery_prod.log
+user=www-data
+directory=/var/www/ureport_prod/
+autostart=true
+autorestart=true
+redirect_stderr=true
+stopsignal=QUIT

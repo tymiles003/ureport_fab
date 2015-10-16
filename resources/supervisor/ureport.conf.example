@@ -1,0 +1,9 @@
+[program:ureport]
+command=/var/www/.virtualenvs/ureport/bin/uwsgi --socket /var/www/ureport_prod/ureport.sock --module ureport.wsgi:application
+stdout_logfile=/var/log/ureport/ureport_prod.log
+user=www-data
+directory=/var/www/ureport_prod/
+autostart=true
+autorestart=true
+redirect_stderr=true
+stopsignal=QUIT
